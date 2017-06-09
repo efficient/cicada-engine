@@ -13,8 +13,6 @@ OPTION(LTO "Use link time optimization" OFF)
 
 # OPTION(AVX2 "Enable AVX2" ON)
 
-OPTION(DPDK "Enable Intel DPDK" ON)
-
 
 
 INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/src)
