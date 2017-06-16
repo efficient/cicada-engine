@@ -48,6 +48,8 @@ Note
 ----
  * The main namespace is mica for historical reasons.  This may change in the future.
  * Some code (e.g., memory pool allocation) needs to be modified for many-core (> 64 cores) non-dual-socket systems.
+ * NUMA-aware parts are tested on a dual-socket system that assigns even-numbered lcore IDs to CPU 0 cores and odd-numbered lcore IDs to CPU 1 cores.
+ * The system expects a full memory bandwidth configuration (e.g., all 4 channels are active).
  * Busy-waiting in contention regulation can be inefficient if hyperthreading is enabled.
    * StaticConfig::kPairwiseSleeping can be enabled to reduce wasted cycles on hyperthreading (experimental).
  * Backoff is currently using only RDTSC for spinning, which can add an excessive delay upon VM live migration.
